@@ -19,7 +19,7 @@ async function obfuscate(key, script, options){
         }
     }
 
-    const a = await fetch('http://api.psu.dev:8080/obfuscate',{
+    const a = await fetch('https://api.psu.dev/obfuscate',{
         method: 'POST',
         body: JSON.stringify(body),
         headers: {
@@ -31,7 +31,7 @@ async function obfuscate(key, script, options){
 }
 
 async function checkkey(key){
-    const a = await fetch('http://api.psu.dev:8080/checkkey',{
+    const a = await fetch('https://api.psu.dev/key',{
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
